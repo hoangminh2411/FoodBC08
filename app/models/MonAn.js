@@ -1,4 +1,6 @@
 export class MonAn { //lớp đối tượng (kiểu dữ liệu mình tự xây dựng)
+                    // đối tượng là biến cụ thể instance 
+                    // Lớp đối tượng sẽ bao gồm nhiều đối tượng
     maMon = '';
     tenMon = '';
     loaiMon = '';
@@ -17,6 +19,7 @@ export class MonAn { //lớp đối tượng (kiểu dữ liệu mình tự xây
         return giaKhuyenMai;
 
     }
+    
     hienThiThongTin = () => {
         return `
         <ul class="list-group mb-3">

@@ -1,25 +1,27 @@
 import { Menu } from "../models/Menu.js";
 import { MonAn } from "../models/MonAn.js";
 
-let arrMonAn = [];
-Lấy dữ liệu từ localstorage ra arrMonAn
-
-    let getDataStorage = () =>{
-        if(localStorage.getItem('danhSachMonAn')){
-            arrMonAn = JSON.parse(localStorage.getItem('danhSachMonAn'))
-        }
-    }
-    getDataStorage();
-    console.log('arr',arrMonAn);
-
-
-
+//let arrMonAn = [];
+//Lấy dữ liệu từ localstorage ra arrMonAn
 let menu = new Menu();
+
+
+    // let getDataStorage = () =>{
+    //     if(localStorage.getItem('danhSachMonAn')){
+    //         menu.arrMonAn = JSON.parse(localStorage.getItem('danhSachMonAn'))
+    //     }
+    // }
+    // getDataStorage();
+    
+
+
+
 menu.layStorage();
 menu.renderMenu('tbodyFood');
 
 
 
+// Không biết sự kiện nào xảy ra trước nên dùng window
 window.xoaMonAn = function (maMon) {
     
     menu.xoaMonAn(maMon);

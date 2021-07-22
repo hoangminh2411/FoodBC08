@@ -15,6 +15,7 @@ export class Menu {
         //Tìm thấy trả về object đó, không tìm thấy thì sẽ trả về undefine
         //this.arrMonAn = [{maMon:1,tenMon:'ten mon',gia:''},{maMon:2,tenMon:'goi',gia:''}, {maMon:3,tenMon:'goi',gia:''}]
         let monAn = this.arrMonAn.find(objectMonAn => objectMonAn.maMon === maMon  );
+        // JS sẽ hiểu là khác undefined
         if(monAn){
             return monAn;
         }

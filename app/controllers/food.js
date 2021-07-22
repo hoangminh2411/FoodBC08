@@ -1,6 +1,6 @@
 import { Menu } from "../models/Menu.js";
 import { MonAn } from "../models/MonAn.js"
-let arrMonAn = [];
+
 let menu = new Menu;
 //Lấy dữ liệu từ localstorage
 menu.layStorage();
@@ -27,7 +27,7 @@ document.querySelector('#btnThemMon').onclick = () => {
     console.log('arrTagInput', arrTagInput);
     console.log('monAn', monAn);
     // Hiển thị thông tin lên giao diện
-    var arrTagOutput = document.querySelectorAll('.list-group-item span , .list-group-item p'); // Các thẻ span và p ảnh hưởng bởi selector này
+   // var arrTagOutput = document.querySelectorAll('.list-group-item span , .list-group-item p'); // Các thẻ span và p ảnh hưởng bởi selector này
 
 
     // Cách 1 dùng querySelectorAll + name
@@ -60,11 +60,11 @@ document.querySelector('#btnThemMon').onclick = () => {
 
 
     // Them mon an
-    // menu.arrMonAn.push(monAn);
-    // menu.themMonAn(monAn);
-    // menu.luuStorage();
-    arrMonAn.push(monAn);
-    localStorage.setItem('danhSachMonAn', JSON.stringify(arrMonAn));
+    //menu.arrMonAn.push(monAn);
+    menu.themMonAn(monAn);
+     menu.luuStorage();
+    
+    //localStorage.setItem('danhSachMonAn', JSON.stringify(arrMonAn));
 
 }
 
